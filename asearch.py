@@ -54,6 +54,7 @@ def get_children(parent_node):
 
 
 def gcalc(node):
+    '''G-value Calculation: finds the cost of current state from original state'''
     count=0
     while node.parent is not None:
         node = node.parent
@@ -62,6 +63,7 @@ def gcalc(node):
 
 
 def hamming(tiles):
+    '''Hamming Heuristic: Counts number of misplaced tiles per different state'''
     distance = 0
     goaltiles = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','0']
     for i in goaltiles:
